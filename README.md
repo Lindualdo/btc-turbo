@@ -1,5 +1,5 @@
 
-# 🧠 BTC Turbo API — v1.0.3
+# 🧠 BTC Turbo API — v1.0.4
 
 API em FastAPI para cálculo de indicadores técnicos e análise de ciclos do BTC, com deploy Dockerizado via Railway.
 User e Senha do Tradinview via Variáveis da Railway
@@ -8,35 +8,26 @@ User e Senha do Tradinview via Variáveis da Railway
 
 ## 🌐 Endpoints (Produção)
 
-### 🔁 Ciclos BTC
-```
-GET /api/v1/btc-cycles/btc-cycles
-```
+### Fundamentos BTC
+GET /api/v1/analise-fundamentos
 
-### 📊 EMAs BTC
-```
+### 🔁 Ciclos BTC
+GET /api/v1/analise-ciclos
+
+### 📊 Análise Tecnica - EMAs
 GET /api/v1/btc-emas/analise-tecnica-emas
-```
 
 ### 🩺 Health Check
-```
 GET /health
-```
 
 ### ⚙️ Configurações Ativas
-```
 GET /config
-```
 
 ### 📘 Swagger UI (Documentação)
-```
 GET /docs
-```
 
 ### 🧾 OpenAPI JSON
-```
 GET /openapi.json
-```
 
 ---
 
@@ -139,19 +130,23 @@ GET /openapi.json
 - Endpoint renomeado de `/btc-emas` para `/analise-tecnica-emas`
 
 ---
+## 🧊 Versão Atual 1.0.4 - 08/05/25
 
-## 🔜 Próximos Endpoints v1 (a desenvolver)
+### 🔹 Endpoint `/api/v1/analise-fundamentos`
 
-### 📊 Análise Técnica
-- `/api/v1/analise-tecnica-ifrs`
+- Análise fundamentos
+  - funcionando porém com dados incosistentes
+  - analise-ciclos sem funcionar corretamente com o Notion
+ 
 
-### 🧠 Fundamentos On-Chain
-- `/api/v1/analise-fundamentos`
+---
 
-### ⚠️ Indicadores de Risco
+## 🔜 Próximos passos:
+- Concluir analise de ciclos (problemas notion)
+- COncluir analise de fundamentos (dados inconsistentes)
+
+### ⚠️ Implementar Indicadores de Risco
 - `/api/v1/analise-riscos`
 
 ---
 
-**Versão estável e pronta para integração com n8n e Notion.**
-teste
